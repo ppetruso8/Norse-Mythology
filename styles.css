@@ -1,0 +1,452 @@
+@viewport {
+    width: device-width;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+html {
+    background-color: var(--secondary_bg_and_link);
+
+    scroll-behavior: smooth;
+
+    --bg_color: rgb(247,247,247);
+    --text_header_details: rgb(022,026,029);
+    --secondary_text: rgb(245,245,245);
+    --secondary_bg_and_link: rgb(12,22,32);
+    --tertiary_bg_border: rgb(220,220,220);
+    --hover: rgb(42,98,143);
+    --active: rgb(131,159,182);
+}
+
+body {
+    width: auto;
+    margin: 0;
+    
+    background-color: var(--bg_color);
+
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    color: var(--text_header_details);
+    font-size: 16px;
+    hyphens: auto;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#main_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--text_header_details);
+    overflow: hidden;
+
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#main_nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+
+    margin: 0.4em 0;
+    padding: 0;
+}
+
+#main_nav ul > li {
+    margin: 0;
+}
+
+#main_nav a {
+    color: var(--secondary_text);
+    text-decoration: none;
+}
+
+#main_nav img {
+    /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    display: none;
+}
+
+header {
+    width: auto;
+    padding: 1em;
+    margin-top: 1.5em;
+
+    background-image:url("images/decoration/Runes.png");
+    background-color: var(--text_header_details);
+
+    color: var(--secondary_text);
+    font-size: 1.5em;
+    line-height: 3em;
+}
+
+header + nav, aside {
+    padding: 1.5em;
+
+    background-color: var(--tertiary_bg_border);
+    line-height: 3em;
+    text-align: left;
+}
+
+header + nav h2, aside h2 {
+    margin: 0 auto;
+    padding-top: 0;
+
+    font-size: 2.2em;
+}
+
+header + nav a {
+    text-decoration: none;
+}
+
+aside {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+aside h2 {
+    margin-bottom: 0.6em;
+}
+
+aside p {
+    margin-top: 0;
+}
+
+aside img {
+    box-shadow: 0px 0px 5px 1px var(--text_header_details);
+    border-radius: 0.5em;
+}
+
+aside figure {
+    margin-bottom: 1em;
+}
+
+ol {
+    list-style: url("images/decoration/jera.svg");
+}
+
+li > ol {
+    list-style: url("images/decoration/ingwaz.svg");
+}
+
+li > ol > li > ol {
+    list-style: url("images/decoration/othala.svg");
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 1em;
+}
+
+main {
+    padding: 5%;
+}
+
+section {
+    scroll-margin-top: 3.4em;
+}
+
+#about_me {
+    scroll-margin-top: 2.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+section, section:last-child {
+    margin-bottom: 2em;
+}
+
+section > section {
+    margin-bottom: 3em;
+}
+
+h1 {
+    text-shadow: 5px 0px 10px var(--text_header_details);
+}
+
+h2, h3, h4 {
+    text-shadow: 1px 0px 0.7px var(--text_header_details);
+}
+
+h2 {
+    margin: 0.8em auto;
+    border-top: 3px solid var(--tertiary_bg_border);
+    padding-top: 0.5em;
+
+    text-align: center;
+    
+    font-size: 2.5em;
+}
+
+h2, h3 {
+    line-height: 1em;
+}
+
+h3, h4 {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+#sources-info p + p {
+    font-size: 0.8em;
+}
+
+.normal {
+    font-style: normal;
+}
+
+p, h3 {
+    margin-top: 1em
+}
+
+a {
+    color: var(--text_header_details);
+}
+
+footer {
+    width: auto;
+    padding: 1em;
+
+    background-color: var(--secondary_bg_and_link);
+
+    text-align: center;
+}
+
+footer, footer a {
+    color: var(--secondary_text);
+}
+
+.category {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    
+    header + nav {
+        text-align: center;
+    }
+
+    #main_nav {
+        font-size: 2em;
+    }
+
+    header {
+        font-size: 2.5em;
+        margin-top: 1.2em;
+    }
+
+    nav {
+        text-align: center;   
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-areas: 
+                    "top top"
+                    "middle-left right"
+                    "bottom-left right";
+    }
+
+    aside h2 {
+        grid-area: top;
+
+        margin-bottom: 1em;
+    }
+    
+    aside p {
+        grid-area: middle-left;
+    }
+
+    aside p + p {
+        grid-area: bottom-left;
+    }
+
+    aside figure {
+        grid-area: right;
+        align-items: center;
+    }
+
+    .category {
+        text-decoration: 1px overline var(--text_header_details);
+        font-size: 1.3em;
+    }
+
+    nav ol {
+        padding: 0;
+    }
+
+    nav li {
+        list-style: none;
+        font-size: 1.1em;
+    }
+
+    li > ol {
+        margin-bottom: 1em;
+    }
+
+    .category {
+        font-size: 1.7em;
+    }
+
+    section {
+        scroll-margin-top: 4em;
+    }
+
+    #about_me {
+        scroll-margin-top: 3em;
+    }
+
+    ul {
+        list-style: url("images/decoration/othala.svg");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    body {
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(3, auto) 2fr auto; 
+        grid-template-areas: 
+        
+            "top top"
+            "second second"
+            "middle-left middle-right"
+            "middle-left-bottom middle-right"
+            "bottom bottom";
+        
+        font-size: 17px;
+        text-align: left;
+    }
+
+    nav {
+        grid-area: top;
+    }
+
+    header {
+        grid-area: second;
+
+        margin-top: 2.3em;
+        padding: 1.5em;
+
+        text-align: center;
+    }
+
+    header + nav {
+        grid-area: middle-left;
+
+        align-self: start;
+        
+        line-height: 2em;
+    }
+
+    header + nav > ol > li:last-child {
+        /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+        display: none;
+    }
+
+    header + nav h2, aside {
+        margin-bottom: 0.2em;
+    }
+
+    aside {
+        grid-area: middle-left-bottom;
+
+        padding-top: 0;
+    }
+
+    aside h2 {
+        /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/border-image */
+        border-top: 20px solid;
+        padding-top: 0.7em;
+        border-image: url("images/decoration/Border.png") 400;
+    }
+
+    aside figure {
+        margin: 1em 2em;
+    }
+
+    main {
+        grid-area: middle-right;
+
+        padding-top: 4%;
+    }
+
+    footer {
+        grid-area: bottom;
+    }
+
+    footer p {
+        margin: 0.5em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2 {
+        margin-bottom: 0.8em;
+    }
+
+    #main_nav ul {
+        margin: 0;
+    }
+    #main_nav ul li {
+        padding: 0.8em;
+    }
+
+    #main_nav img {
+        display: inherit;
+        float: left;
+        margin: 0.35em 1em;
+    }
+
+    ul {
+        list-style: url("images/decoration/othala.svg");
+    }
+
+    #main_nav ul li:hover {
+        background-color: black;
+        transition: background-color 1s;
+    }
+
+    header + nav li a:hover, p a:hover {
+        color: var(--hover);
+    }
+
+    header + nav li a:active, p a:active {
+        color: var(--active)
+    }
+
+    section {
+        scroll-margin-top: 4.5em;
+    }
+}

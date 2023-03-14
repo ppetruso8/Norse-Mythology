@@ -1,0 +1,88 @@
+body {
+    text-align: center;
+}
+
+#division p + p {
+    font-size: 0.8em;
+}
+
+figure {
+    margin: 0;
+}
+
+#gods p {
+    margin-top: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    #gods > section section {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        grid-template-areas: 
+                        "top top"
+                        "left right";
+        gap: 0;
+        align-items: center;
+
+        margin: 0 auto;
+    }
+    
+    h3 {
+        grid-area: top;
+    }
+
+    #gods p {
+        grid-area: left;
+        margin: 1em 1em 1em 0;
+    }
+
+    figure {
+        grid-area: right;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #division {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 3em;
+
+        margin-bottom: 0;
+    }
+
+    #division section {
+        flex: 1;
+    }
+
+    #division section, #division h2 {
+        margin: 0 auto;
+    }
+
+    #gods > section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+
+    #gods > section section {
+        flex-grow: 1;
+        flex-basis: 30%;
+    }
+
+    #gods section, #gods p {
+        margin-bottom: 0;
+    }
+
+    #gods h3 {
+        margin-top: 0
+    }
+
+    #gods h2 {
+        margin-bottom: 1.2em;
+    }
+
+    #sources ul {
+        text-align: left;
+    }
+}

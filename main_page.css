@@ -1,0 +1,197 @@
+#intro {
+    margin-top: 0;
+    font-style: italic;
+    line-height: 35px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+li a[href~="#creatures"] {
+    font-weight: bold;
+}
+
+img {
+    box-shadow: 0px 0px 5px 1px var(--text_header_details);
+}
+
+figcaption {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+#world h3 {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 600px) {
+    #sources-info, #world {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-areas: 
+                    "top top"
+                    "top-left right"
+                    "middle-left right"
+                    "bottom bottom";
+        gap: 0;
+        align-items: center;
+        
+        margin: 0 auto;
+    }
+    
+    #sources-info h3, #world h3 {
+        grid-area: top;
+    
+        margin: 0.5em 0 0;
+    }
+    
+    #sources-info p, #world p {
+        grid-area: top-left;
+    }
+
+    #sources-info p {
+        text-align: center;
+    }
+    
+    #sources-info figure + p, #world figure + p {
+        grid-area: middle-left;
+
+        margin-top: 0;
+    }
+    
+    #sources-info figure, #world figure {
+        grid-area: right;
+    
+        margin: 0 0 0 2em;
+    }
+
+    #ragnarok, #dwarves, #valkyries, #jormungandr {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-areas: 
+                        "top top"
+                        "left right";
+        gap: 0;
+        align-items: center;
+
+        margin: 0 auto;
+    }
+
+    #ragnarok h3, #dwarves h4, #valkyries h4, #jormungandr h4 {
+        grid-area: top;
+    }
+
+    #ragnarok h3 {
+        margin-top: 0;
+    }
+
+    #ragnarok p, #dwarves p, #valkyries p, #jormungandr p {
+        grid-area: left;
+    }
+
+    #ragnarok figure, #dwarves figure, #valkyries figure, #jormungandr figure {
+        grid-area: right;
+
+        margin: 0 0 0 2em;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    #sources-info img {
+        margin-top: 1.5em;
+        max-width: 85%;
+    }
+
+    #creatures section {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    li a[href~="#creatures"] {
+        text-decoration: 1px overline var(--text_header_details);
+    }
+
+    #basic h2 + section, #where {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #intro {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #basic > h2 + section {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 3em;
+    }
+
+    #basic > section section {
+        flex-grow: 1;
+        flex-basis: 30%;
+    }
+
+    #basic section, #basic section p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    #basic > h2 + section h3 {
+        margin-top: 0
+    }
+
+    #basic h2 {
+        margin-bottom: 1em;
+    }
+
+    figure {
+        text-align: center;
+    }
+    
+    #sources-info, #world {
+        grid-template-columns: 1.8fr 1fr;
+        grid-template-areas: 
+                    "top top"
+                    "left right"
+                    "bottom-left right";
+
+        margin-top: auto;
+    }
+
+    #sources-info p, #world p {
+        grid-area: left;
+    }
+
+    #sources-info p { 
+        margin-top: 0
+    }
+
+    #sources-info figure + p, #world figure + p {
+        grid-area: bottom-left;
+    }
+
+    #sources-info figure, #world figure {
+        margin-top: 1em;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    #world h3 {
+        margin-top: 0.8em;
+    }
+
+    #dwarves img, #valkyries img, #jormungandr img {
+        max-width: 67%;
+    }
+}
